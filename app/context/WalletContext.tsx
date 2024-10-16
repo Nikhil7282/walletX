@@ -13,6 +13,8 @@ const WalletProvider = ({ children }: { children: React.ReactNode }) => {
   const [operation, setOperation] = useState<WalletOperation | null>(null);
   const [blockChain, setBlockChain] = useState<blockChain | null>(null);
   const [mnemonic, setMnemonic] = useState<string | null>(null);
+  const [publicKeys, setPublicKeys] = useState<string[]>([]);
+  const [pathIndex, setPathIndex] = useState(0);
   return (
     <walletContext.Provider
       value={{
@@ -22,6 +24,10 @@ const WalletProvider = ({ children }: { children: React.ReactNode }) => {
         setBlockChain,
         mnemonic,
         setMnemonic,
+        publicKeys,
+        setPublicKeys,
+        pathIndex,
+        setPathIndex,
       }}
     >
       {children}

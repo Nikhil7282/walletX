@@ -5,6 +5,10 @@ export interface initWalletType {
   setBlockChain: React.Dispatch<React.SetStateAction<blockChain | null>>;
   mnemonic: string | null;
   setMnemonic: React.Dispatch<React.SetStateAction<string | null>>;
+  publicKeys: string[];
+  setPublicKeys: React.Dispatch<React.SetStateAction<string[]>>;
+  pathIndex: number;
+  setPathIndex: React.Dispatch<React.SetStateAction<number>>;
 }
 
 export enum WalletOperation {
